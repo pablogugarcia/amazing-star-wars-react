@@ -34,3 +34,11 @@ export interface Characters {
     created: string
     edited: string
 }
+
+
+export interface ResponseList<T> {
+    count: number, 
+    next: string, 
+    previous: null, 
+    "results" : T[]
+}

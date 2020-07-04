@@ -1,21 +1,18 @@
 import React, { useEffect, useState } from 'react'
 import './FilmScreen.scss'
 import { Card, CardContent } from '@material-ui/core'
-import { Film } from '../../models/api/Api'
+import { Film, ResponseList } from '../../models/api/Api'
 import MovieCard from '../../components/movie-card/MovieCard'
 import Loading from '../../components/loading/Loading'
+import simpleFetch from '../../api/utils/simple-fetch'
 
 const FilmScreen = (): JSX.Element => {
   const [films, setFilms] = useState<(Film & { isSelected?: boolean })[]>([])
   useEffect(() => {
     const id = setTimeout(() => {
-      fetch('https://swapi.dev/api/films')
-        .then((r) => r.json())
-        .then((data) => {
-          setFilms(data.results)
-        })
-        .catch(() => undefined) // for now
-    }, 10000)
+      simpleFetch<ResponseList<Film>>('https://swapi.dev/api/films')
+      .then(data => setFilms(data.results))
+    }, 3000)
 
     return () => clearTimeout(id)
   }, [])
@@ -42,6 +39,7 @@ const FilmScreen = (): JSX.Element => {
       {films.map((film) => (
         <Card
           key={film.title}
+          className="film-card"
           style={{
             gridColumnStart: film.isSelected ? 'span 3' : 'unset',
           }}
@@ -50,7 +48,7 @@ const FilmScreen = (): JSX.Element => {
           <CardContent className="film-card-content">
             <div>
               <p>
-                <span className="film-label">Name: </span>
+                <span className="film-label">Movie name: </span>
                 {film.title}
               </p>
               <p>
