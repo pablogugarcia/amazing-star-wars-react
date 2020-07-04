@@ -68,8 +68,8 @@
     },
     "lint-staged": {
         "./src/*.{js,jsx,ts,tsx}": [
-            "npm prettier --write",
-            "eslint src/*.js --fix-dry-run"
+            "npx prettier --write",
+            "bash eslint-pre-commit.sh"
         ]
     }
 }
