@@ -26,7 +26,7 @@ export interface Characters {
     mass: string
     skin_color: string
     homeworld: string
-    films: []
+    films: string[]
     species: []
     starships: []
     vehicles: []
@@ -40,5 +40,5 @@ export interface ResponseList<T> {
     count: number, 
     next: string, 
     previous: null, 
-    "results" : T[]
+    results : T[]
 }

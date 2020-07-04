@@ -1,21 +1,32 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
 import './FilmScreen.scss'
 import { Card, CardContent } from '@material-ui/core'
-import { Film, ResponseList } from '../../models/api/Api'
+import { Link } from 'react-router-dom'
+import { Film } from '../../models/api/Api'
 import MovieCard from '../../components/movie-card/MovieCard'
 import Loading from '../../components/loading/Loading'
-import simpleFetch from '../../api/utils/simple-fetch'
+import { store } from '../../store/store'
+import { getFilms } from '../../store/api/api-actions'
 
 const FilmScreen = (): JSX.Element => {
   const [films, setFilms] = useState<(Film & { isSelected?: boolean })[]>([])
+  const globalState = useContext(store)
+  const { dispatch, state } = globalState
+
   useEffect(() => {
     const id = setTimeout(() => {
-      simpleFetch<ResponseList<Film>>('https://swapi.dev/api/films')
-      .then(data => setFilms(data.results))
+      if (state.films.length === 0) {
+        getFilms(dispatch)
+      }
     }, 3000)
 
     return () => clearTimeout(id)
   }, [])
+
+  useEffect(() => {
+    setFilms(state.films)
+    console.log("films --->",state.films)
+  }, [state.films])
 
   const handleCardClick = (title: string) => () => {
     setFilms((prevState) =>
@@ -30,7 +41,7 @@ const FilmScreen = (): JSX.Element => {
     )
   }
 
-  if (films.length === 0) {
+  if (state.films.length === 0) {
     return <Loading />
   }
 
@@ -47,10 +58,10 @@ const FilmScreen = (): JSX.Element => {
         >
           <CardContent className="film-card-content">
             <div>
-              <p>
+              <h3>
                 <span className="film-label">Movie name: </span>
                 {film.title}
-              </p>
+              </h3>
               <p>
                 <span className="film-label">Episode number : </span>
                 {film.episode_id}
@@ -59,7 +70,9 @@ const FilmScreen = (): JSX.Element => {
                 <span className="film-label">Director: </span>
                 {film.director}
               </p>
-              <p>link</p>
+              <p>
+                <Link to="/People">People</Link>
+              </p>
             </div>
 
             {film.isSelected && <MovieCard text={film.opening_crawl} />}
