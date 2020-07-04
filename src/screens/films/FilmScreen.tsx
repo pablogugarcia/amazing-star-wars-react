@@ -25,7 +25,6 @@ const FilmScreen = (): JSX.Element => {
 
   useEffect(() => {
     setFilms(state.films)
-    console.log("films --->",state.films)
   }, [state.films])
 
   const handleCardClick = (title: string) => () => {

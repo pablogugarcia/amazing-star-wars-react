@@ -80,7 +80,6 @@ const PeopleScreen = (): JSX.Element => {
   }, [state.characters, state.films])
 
   const handlePaginationChange =(page: number) => {
-    console.log(page)
     getCharactersWithPagination(dispatch, page)
   }
 
@@ -98,11 +97,3 @@ const PeopleScreen = (): JSX.Element => {
 
 export default PeopleScreen
 
-/* <Column title="Name" dataIndex="name" key="name" />
-    <Column title="Eye color" dataIndex="eye_color" key="eye_color" />
-
-    <Column title="Gender" dataIndex="gender" key="gender" />
-    <Column title="List of films" dataIndex="films" key="films" render={
-        films => <> {films.map((film: any) => <li> <a href="/" >{film} </a> </li>)} </>
-    } />
-    */
