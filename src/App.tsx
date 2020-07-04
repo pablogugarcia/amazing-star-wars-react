@@ -1,26 +1,54 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react'
+import { Route } from 'react-router-dom'
+import HomeScreen from './screens/home/HomeScreen'
+import NavBar from './components/navbar/Navbar'
+import Particles from './components/particles/Particles'
+import FilmScreen from './screens/films/FilmScreen'
+import PeopleScreen from './screens/people/PeopleScreen'
+import MainLayout from './layouts/MainLayout'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = (): JSX.Element => {
+    useEffect(() => {
+        fetch('https://swapi.dev/api/films/1/')
+            .then((r) => r.json())
+            .then((r) => console.log(r))
+    }, [])
+
+    return (
+        <div>
+            <NavBar items={['Films', 'People']} />
+            <div style={{ display: 'flex', justifyContent: 'space-around ' }}>
+                <div
+                    style={{
+                        border: '1px solid #e2e2e2',
+                        margin: '5rem 5rem 1rem 5rem',
+                        width: '10%',
+                    }}
+                />
+                <div
+                    style={{
+                        border: '1px solid #e2e2e2',
+                        margin: '5rem 5rem 1rem 5rem',
+                        width: '10%',
+                    }}
+                />
+            </div>
+            <Particles />
+            <Route path="/Films">
+                <MainLayout title="FILMS">
+                    <FilmScreen />
+                </MainLayout>
+            </Route>
+            <Route path="/People">
+                <MainLayout title="PEOPLE">
+                    <PeopleScreen />
+                </MainLayout>
+            </Route>
+            <Route path="/" exact>
+                <HomeScreen />
+            </Route>
+        </div>
+    )
 }
 
-export default App;
+export default App

@@ -1,0 +1,31 @@
+@import '../../themes/colors.scss';
+
+.loading {
+    width: 200px;
+    height: 200px;
+    clip-path: circle(17.1% at 50% 50%);
+    animation: circle 5s infinite;
+}
+
+.loading-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loading-label {
+    color: $primary;
+}
+
+@keyframes circle {
+    0% {
+        clip-path: circle(17.1% at 50% 50%);
+    }
+    50% {
+        clip-path: circle(50% at 50% 50%);
+    }
+    100% {
+        clip-path: circle(17.1% at 50% 50%);
+    }
+}

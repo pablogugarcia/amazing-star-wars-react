@@ -1,0 +1,14 @@
+@import '../../themes/colors.scss';
+
+.home-title {
+    color: $primary;
+    text-align: center;
+    font-size: 10rem;
+    background: none;
+}
+
+@media (max-width: 400px) {
+    .home-title {
+        font-size: 6rem;
+    }
+}

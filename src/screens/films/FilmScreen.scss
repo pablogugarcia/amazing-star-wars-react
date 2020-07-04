@@ -1,0 +1,16 @@
+@import '../../themes/colors.scss';
+
+.film-screen-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+
+    .film-card-content {
+        display: flex;
+        justify-content: space-around;
+        .film-label {
+            font-weight: 700;
+        }
+    }
+}

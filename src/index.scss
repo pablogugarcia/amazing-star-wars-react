@@ -1,0 +1,27 @@
+@import '~antd/dist/antd.css';
+
+* {
+    cursor: url('./assets/cursor/lightsaber.svg'), auto;
+}
+
+body {
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif; */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #222;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+}
+
+.laser-cursor {
+    cursor: url('./assets/cursor/lightsaber.svg'), url('/images/chef.cur');
+}
