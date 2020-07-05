@@ -1,5 +1,7 @@
 // SIMPLE FETCH FOR TEST
 
+import { message } from "antd"
+
 
 
 const requiredOptions = {
@@ -16,7 +18,7 @@ const simpleFetch = <T>(url: string, options = defaultOptions  ): Promise<T> => 
     fetch(url, { ...requiredOptions, ...options })
       .then((res) => res.json())
       .then((data) => resolve(data))
-      .catch(() => reject(alert('ERROR')))
+      .catch(() => reject(message.error('Upps something went wrong')))
   })
 }
 

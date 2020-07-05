@@ -1,15 +1,30 @@
 import React, { useReducer, Dispatch } from 'react'
 import { Film, Characters } from '../models/api/Api'
 
-type actionTypes = 'SET_ALL_FILMS' | 'SET_ALL_PEOPLE' | 'SET_ALL_PEOPLE_PAGINATION'
-type stateContext = { films: Film[]; characters: Characters[] ; totalCharacters: number}
+type actionTypes =
+  | 'SET_ALL_FILMS'
+  | 'SET_ALL_PEOPLE'
+  | 'SET_ALL_PEOPLE_PAGINATION'
+
+type stateContext = {
+  films: Film[]
+  characters: Characters[]
+  totalCharacters: number
+}
 type actionContext = { type: actionTypes; payload: any }
+
+const initialReducerState = {
+  films: [],
+  characters: [],
+  totalCharacters: 0,
+}
+
 
 const initialStateStore: {
   state: stateContext
   dispatch: Dispatch<actionContext>
 } = {
-  state: { films: [], characters: [], totalCharacters: 0 },
+  state: initialReducerState,
   dispatch: () => undefined,
 }
 const store = React.createContext(initialStateStore)
@@ -34,7 +49,7 @@ const reducer = (state: stateContext, action: actionContext) => {
         totalCharacters: action.payload.count,
       }
     default:
-      return state;
+      return state
   }
 }
 
@@ -42,14 +57,9 @@ interface StateProviderProps {
   children: JSX.Element
 }
 
-const initialState = {
-  films: [],
-  characters: [],
-  totalCharacters: 0
-}
 
 const StateProvider = ({ children }: StateProviderProps): JSX.Element => {
-  const [state, dispatch] = useReducer(reducer, initialState)
+  const [state, dispatch] = useReducer(reducer, initialReducerState)
 
   return <Provider value={{ state, dispatch }}>{children}</Provider>
 }
