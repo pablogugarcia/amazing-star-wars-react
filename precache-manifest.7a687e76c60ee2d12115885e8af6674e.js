@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ff804b76b35f96894e078990d040afb6",
+    "revision": "0e13a7dd1a58bb830aedd482ffb90f00",
     "url": "/amazing-star-wars-react/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/amazing-star-wars-react/static/css/2.cef8191b.chunk.css"
   },
   {
-    "revision": "d93e77617a8835fa4f6f",
+    "revision": "d643485e63cb5e9bf594",
     "url": "/amazing-star-wars-react/static/css/main.acb88737.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/amazing-star-wars-react/static/js/2.1b4e5d31.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d93e77617a8835fa4f6f",
-    "url": "/amazing-star-wars-react/static/js/main.7a512c0f.chunk.js"
+    "revision": "d643485e63cb5e9bf594",
+    "url": "/amazing-star-wars-react/static/js/main.3a6099c5.chunk.js"
   },
   {
     "revision": "cd97688866d7f29e9ce4",
