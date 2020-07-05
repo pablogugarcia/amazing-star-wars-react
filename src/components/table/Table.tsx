@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 import { Table } from 'antd'
 import { ColumnProps, TablePaginationConfig } from 'antd/lib/table'
 
-interface TableProps {
-  data: any[]
-  columns?: ColumnProps<any>[]
+interface TableProps<T> {
+  data: T[]
+  columns?: ColumnProps<unknown>[]
   pagination: TablePaginationConfig
   onPaginationChange: (page: number) => void
 }
@@ -26,7 +26,7 @@ const TableComponent = ({
 
   return (
     <Table dataSource={data} pagination={paginationState}  onChange={handlePaginationChange}>
-      {columns?.map((column: ColumnProps<any>) => {
+      {columns?.map((column: ColumnProps<unknown>) => {
         if (column.render) {
           return (
             <Column

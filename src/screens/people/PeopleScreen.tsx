@@ -24,7 +24,7 @@ function formatForTable(films: Film[], characters: Characters[]): Characters[] {
   })
 }
 
-const isEmpty = (array: any[]) => array.length === 0
+const isEmpty = (array: unknown[]) => array.length === 0
 
 const columns = [
   {
@@ -58,11 +58,9 @@ const columns = [
         value: 'blue-gray',
       },
     ],
-    onFilter: (value: any, record: any) => {
-      console.log(value, record)
-
-      return record.eye_color.indexOf(value) === 0
-    },
+    // eslint-disable-next-line camelcase
+    onFilter: (value: string, record: { eye_color: string }) =>
+      record.eye_color.indexOf(value) === 0,
   },
   {
     title: 'Gender',
@@ -82,11 +80,7 @@ const columns = [
         value: 'n/a',
       },
     ],
-    onFilter: (value: any, record: any) => {
-      console.log(value, record)
-
-      return record.gender.indexOf(value) === 0
-    },
+    onFilter: (value: string, record: { gender: string | string[] }) => record.gender.indexOf(value) === 0,
   },
   {
     title: 'List of films',
@@ -128,18 +122,14 @@ const columns = [
         value: 'Revenge of the Sith',
       },
     ],
-    onFilter: (value: any, record: any) => {
-      console.log(value, record)
-
-      return record.films.some((film: any) => film.indexOf(value) === 0)
-    },
+    onFilter: (value: string, record: { films: string[] }) =>
+      record.films.some((film) => film.indexOf(value) === 0),
   },
 ]
 
 const getPagination = (total: number): TablePaginationConfig => {
   return { current: 1, total, showSizeChanger: false }
 }
-
 
 const PeopleScreen = (): JSX.Element => {
   const [characters, setCharacters] = useState<Characters[] | []>([])

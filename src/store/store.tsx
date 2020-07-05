@@ -11,6 +11,7 @@ type stateContext = {
   characters: Characters[]
   totalCharacters: number
 }
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 type actionContext = { type: actionTypes; payload: any }
 
 const initialReducerState = {
