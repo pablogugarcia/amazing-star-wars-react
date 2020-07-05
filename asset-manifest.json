@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/pablogugarcia/amazing-star-wars-react/static/css/main.24e6eb37.chunk.css",
+    "main.js": "/pablogugarcia/amazing-star-wars-react/static/js/main.53fe22bc.chunk.js",
+    "main.js.map": "/pablogugarcia/amazing-star-wars-react/static/js/main.53fe22bc.chunk.js.map",
+    "runtime-main.js": "/pablogugarcia/amazing-star-wars-react/static/js/runtime-main.7c30fd0c.js",
+    "runtime-main.js.map": "/pablogugarcia/amazing-star-wars-react/static/js/runtime-main.7c30fd0c.js.map",
+    "static/css/2.cef8191b.chunk.css": "/pablogugarcia/amazing-star-wars-react/static/css/2.cef8191b.chunk.css",
+    "static/js/2.9658b51b.chunk.js": "/pablogugarcia/amazing-star-wars-react/static/js/2.9658b51b.chunk.js",
+    "static/js/2.9658b51b.chunk.js.map": "/pablogugarcia/amazing-star-wars-react/static/js/2.9658b51b.chunk.js.map",
+    "index.html": "/pablogugarcia/amazing-star-wars-react/index.html",
+    "precache-manifest.01ecff9aad2be1fc09d6a0edc35bc7fd.js": "/pablogugarcia/amazing-star-wars-react/precache-manifest.01ecff9aad2be1fc09d6a0edc35bc7fd.js",
+    "service-worker.js": "/pablogugarcia/amazing-star-wars-react/service-worker.js",
+    "static/css/2.cef8191b.chunk.css.map": "/pablogugarcia/amazing-star-wars-react/static/css/2.cef8191b.chunk.css.map",
+    "static/css/main.24e6eb37.chunk.css.map": "/pablogugarcia/amazing-star-wars-react/static/css/main.24e6eb37.chunk.css.map",
+    "static/js/2.9658b51b.chunk.js.LICENSE.txt": "/pablogugarcia/amazing-star-wars-react/static/js/2.9658b51b.chunk.js.LICENSE.txt",
+    "static/media/home.svg": "/pablogugarcia/amazing-star-wars-react/static/media/home.87954d9a.svg",
+    "static/media/index.scss": "/pablogugarcia/amazing-star-wars-react/static/media/lightsaber.c2ec3eed.svg",
+    "static/media/loading.gif": "/pablogugarcia/amazing-star-wars-react/static/media/loading.cd795592.gif"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7c30fd0c.js",
+    "static/css/2.cef8191b.chunk.css",
+    "static/js/2.9658b51b.chunk.js",
+    "static/css/main.24e6eb37.chunk.css",
+    "static/js/main.53fe22bc.chunk.js"
+  ]
+}
