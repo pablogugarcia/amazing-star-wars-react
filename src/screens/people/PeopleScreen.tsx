@@ -140,9 +140,6 @@ const getPagination = (total: number): TablePaginationConfig => {
   return { current: 1, total, showSizeChanger: false }
 }
 
-function filterByEyeColor(characters: Characters[]) {
-  return characters.filter((character) => character.eye_color === 'blue')
-}
 
 const PeopleScreen = (): JSX.Element => {
   const [characters, setCharacters] = useState<Characters[] | []>([])

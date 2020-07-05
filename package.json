@@ -23,7 +23,8 @@
     "eject": "react-scripts eject",
     "prettier": "npm prettier --write .",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "lint": "eslint ./src/ --ext .tsx --ext .ts --fix"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -68,7 +69,7 @@
     }
   },
   "lint-staged": {
-    "./src/**.{js,jsx,ts,tsx}": [
+    "./src/*.{js,jsx,ts,tsx}": [
       "npx prettier --write",
       "bash eslint-pre-commit.sh"
     ]
