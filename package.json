@@ -76,7 +76,8 @@
   "lint-staged": {
     "./src/*.{js,jsx,ts,tsx}": [
       "npx prettier --write",
-      "bash eslint-pre-commit.sh"
+      "bash eslint-pre-commit.sh",
+      "yarn test"
     ]
   },
   "proxy": "https://swapi.dev/api",

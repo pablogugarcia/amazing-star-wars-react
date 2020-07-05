@@ -7,9 +7,6 @@
 body {
     margin: 0;
     font-family: 'Josefin Sans', sans-serif;
-    /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif; */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-color: #111;
@@ -20,8 +17,4 @@ body {
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
         monospace;
-}
-
-.laser-cursor {
-    cursor: url('./assets/cursor/lightsaber.svg'), url('/images/chef.cur');
 }
