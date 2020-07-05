@@ -23,7 +23,7 @@ const FilmScreen = (): JSX.Element => {
     return () => clearTimeout(id)
   }, [])
 
-  useEffect(() => {
+  useEffect(() => { 
     setFilms(state.films)
   }, [state.films])
 

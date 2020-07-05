@@ -34,7 +34,7 @@ const NavBar = ({ items, position }: NavbarProps): JSX.Element => (
 
         <ul className={styles.menu} style={getPosition(position)}>
             {items.map((item) => (
-                <li className={styles.items}>
+                <li key={item} className={styles.items}>
                     <Link to={item}>{item}</Link>
                 </li>
             ))}

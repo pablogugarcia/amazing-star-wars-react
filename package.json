@@ -4,16 +4,17 @@
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.11.0",
+    "@testing-library/jest-dom": "^4.2.4",
     "@types/react-router-dom": "^5.1.5",
     "antd": "^4.4.0",
     "gsap": "^3.3.4",
+    "http-proxy-middleware": "^1.0.4",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-particles-js": "^3.2.1",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.1",
-    "@testing-library/jest-dom": "^4.2.4"
+    "react-scripts": "3.4.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -64,9 +65,10 @@
     }
   },
   "lint-staged": {
-    "./src/*.{js,jsx,ts,tsx}": [
+    "./src/**.{js,jsx,ts,tsx}": [
       "npx prettier --write",
       "bash eslint-pre-commit.sh"
     ]
-  }
+  },
+  "proxy": "https://swapi.dev/api"
 }
