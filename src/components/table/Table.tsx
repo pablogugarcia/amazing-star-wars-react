@@ -25,7 +25,7 @@ const TableComponent = ({
   }
 
   return (
-    <Table dataSource={data} pagination={paginationState} onChange={handlePaginationChange} >
+    <Table dataSource={data} pagination={paginationState}  onChange={handlePaginationChange}>
       {columns?.map((column: ColumnProps<any>) => {
         if (column.render) {
           return (
@@ -34,10 +34,20 @@ const TableComponent = ({
               dataIndex={column.dataIndex}
               key={column.key}
               render={column.render}
+              filters={column.filters}
+              onFilter={column.onFilter}
             />
           )
         }
-        return <Column title={column.title} dataIndex={column.dataIndex} key={column.key} />
+        return (
+          <Column
+            title={column.title}
+            dataIndex={column.dataIndex}
+            key={column.key}
+            onFilter={column.onFilter}
+            filters={column.filters}
+          />
+        )
       })}
     </Table>
   )

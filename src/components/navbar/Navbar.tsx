@@ -29,7 +29,7 @@ const NavBar = ({ items, position }: NavbarProps): JSX.Element => (
     <nav className={styles.container}>
         <Link to="/" className={styles.homeIcon}>
             <img src={HomeIMG} alt="home" />
-            HOME
+            {' '}HOME
         </Link>
 
         <ul className={styles.menu} style={getPosition(position)}>
