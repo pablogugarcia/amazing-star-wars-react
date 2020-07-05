@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useContext, useRef } from 'react'
-import { TablePaginationConfig } from 'antd/lib/table'
+import { TablePaginationConfig, ColumnProps } from 'antd/lib/table'
 import { Link } from 'react-router-dom'
 import TableComponent from '../../components/table/Table'
 import Loading from '../../components/loading/Loading'
@@ -26,7 +26,7 @@ function formatForTable(films: Film[], characters: Characters[]): Characters[] {
 
 const isEmpty = (array: unknown[]) => array.length === 0
 
-const columns = [
+const columns: ColumnProps<any>[] = [
   {
     title: 'Name',
     dataIndex: 'name',
@@ -59,8 +59,8 @@ const columns = [
       },
     ],
     // eslint-disable-next-line camelcase
-    onFilter: (value: string, record: { eye_color: string }) =>
-      record.eye_color.indexOf(value) === 0,
+    onFilter: (value, record: { eye_color: string }) =>
+      record.eye_color.indexOf(value as string) === 0,
   },
   {
     title: 'Gender',
@@ -80,7 +80,8 @@ const columns = [
         value: 'n/a',
       },
     ],
-    onFilter: (value: string, record: { gender: string | string[] }) => record.gender.indexOf(value) === 0,
+    onFilter: (value, record: { gender: string | string[] }) =>
+      record.gender.indexOf(value as string) === 0,
   },
   {
     title: 'List of films',
@@ -122,8 +123,8 @@ const columns = [
         value: 'Revenge of the Sith',
       },
     ],
-    onFilter: (value: string, record: { films: string[] }) =>
-      record.films.some((film) => film.indexOf(value) === 0),
+    onFilter: (value, record: { films: string[] }) =>
+      record.films.some((film) => film.indexOf(value as string) === 0),
   },
 ]
 

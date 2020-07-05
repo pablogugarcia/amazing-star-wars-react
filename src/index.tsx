@@ -1,17 +1,17 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.scss'
-import { BrowserRouter } from 'react-router-dom'
+import { HashRouter } from 'react-router-dom'
 import App from './App'
 import { StateProvider } from './store/store'
 
 ReactDOM.render(
   // <React.StrictMode>
-  <BrowserRouter>
+  <HashRouter basename="/">
     <StateProvider>
       <App />
     </StateProvider>
-  </BrowserRouter>, // </React.StrictMode>
+  </HashRouter>, // </React.StrictMode>
 
   document.getElementById('root')
 )

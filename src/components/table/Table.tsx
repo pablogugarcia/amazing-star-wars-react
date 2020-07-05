@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 import { Table } from 'antd'
 import { ColumnProps, TablePaginationConfig } from 'antd/lib/table'
+import { Characters } from '../../models/api/Api'
 
 interface TableProps<T> {
   data: T[]
-  columns?: ColumnProps<unknown>[]
+  columns?: ColumnProps<any>[]
   pagination: TablePaginationConfig
   onPaginationChange: (page: number) => void
 }
@@ -16,7 +17,7 @@ const TableComponent = ({
   columns,
   pagination,
   onPaginationChange,
-}: TableProps): JSX.Element => {
+}: TableProps<Characters>): JSX.Element => {
   const [paginationState, setPagination] = useState<TablePaginationConfig>(pagination)
 
   const handlePaginationChange = (pag: TablePaginationConfig) => {

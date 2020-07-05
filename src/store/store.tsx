@@ -1,18 +1,18 @@
 import React, { useReducer, Dispatch } from 'react'
 import { Film, Characters } from '../models/api/Api'
 
-type actionTypes =
+export type actionTypes =
   | 'SET_ALL_FILMS'
   | 'SET_ALL_PEOPLE'
   | 'SET_ALL_PEOPLE_PAGINATION'
 
-type stateContext = {
+export type stateContext = {
   films: Film[]
   characters: Characters[]
   totalCharacters: number
 }
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-type actionContext = { type: actionTypes; payload: any }
+export type actionContext = { type: actionTypes; payload: any }
 
 const initialReducerState = {
   films: [],
