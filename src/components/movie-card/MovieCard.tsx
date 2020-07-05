@@ -1,8 +1,11 @@
 import React, { useRef, useEffect } from 'react'
-import { TimelineLite } from 'gsap'
+import { TimelineLite , gsap } from 'gsap'
+import { CSSPlugin } from 'gsap/CSSPlugin'
 
 import './MovieCard.scss'
 import { MovieCardProps } from './MovieCard.model'
+
+gsap.registerPlugin(CSSPlugin)
 
 const MovieCard = ({ text }: MovieCardProps): JSX.Element => {
   const content = useRef<HTMLDivElement>(null)
