@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/amazing-star-wars-react/static/css/main.acb88737.chunk.css",
-    "main.js": "/amazing-star-wars-react/static/js/main.ffae9792.chunk.js",
-    "main.js.map": "/amazing-star-wars-react/static/js/main.ffae9792.chunk.js.map",
+    "main.js": "/amazing-star-wars-react/static/js/main.87bef9c5.chunk.js",
+    "main.js.map": "/amazing-star-wars-react/static/js/main.87bef9c5.chunk.js.map",
     "runtime-main.js": "/amazing-star-wars-react/static/js/runtime-main.4c4bd4df.js",
     "runtime-main.js.map": "/amazing-star-wars-react/static/js/runtime-main.4c4bd4df.js.map",
     "static/css/2.cef8191b.chunk.css": "/amazing-star-wars-react/static/css/2.cef8191b.chunk.css",
-    "static/js/2.9658b51b.chunk.js": "/amazing-star-wars-react/static/js/2.9658b51b.chunk.js",
-    "static/js/2.9658b51b.chunk.js.map": "/amazing-star-wars-react/static/js/2.9658b51b.chunk.js.map",
+    "static/js/2.1b4e5d31.chunk.js": "/amazing-star-wars-react/static/js/2.1b4e5d31.chunk.js",
+    "static/js/2.1b4e5d31.chunk.js.map": "/amazing-star-wars-react/static/js/2.1b4e5d31.chunk.js.map",
     "index.html": "/amazing-star-wars-react/index.html",
-    "precache-manifest.e8ddc12dfe8cd6720d5527b62db7e10e.js": "/amazing-star-wars-react/precache-manifest.e8ddc12dfe8cd6720d5527b62db7e10e.js",
+    "precache-manifest.b9f917a1fda5f4d704dcc2ba1c4e6d93.js": "/amazing-star-wars-react/precache-manifest.b9f917a1fda5f4d704dcc2ba1c4e6d93.js",
     "service-worker.js": "/amazing-star-wars-react/service-worker.js",
     "static/css/2.cef8191b.chunk.css.map": "/amazing-star-wars-react/static/css/2.cef8191b.chunk.css.map",
     "static/css/main.acb88737.chunk.css.map": "/amazing-star-wars-react/static/css/main.acb88737.chunk.css.map",
-    "static/js/2.9658b51b.chunk.js.LICENSE.txt": "/amazing-star-wars-react/static/js/2.9658b51b.chunk.js.LICENSE.txt",
+    "static/js/2.1b4e5d31.chunk.js.LICENSE.txt": "/amazing-star-wars-react/static/js/2.1b4e5d31.chunk.js.LICENSE.txt",
     "static/media/home.svg": "/amazing-star-wars-react/static/media/home.87954d9a.svg",
     "static/media/index.scss": "/amazing-star-wars-react/static/media/lightsaber.c2ec3eed.svg",
     "static/media/loading.gif": "/amazing-star-wars-react/static/media/loading.cd795592.gif"
@@ -21,8 +21,8 @@
   "entrypoints": [
     "static/js/runtime-main.4c4bd4df.js",
     "static/css/2.cef8191b.chunk.css",
-    "static/js/2.9658b51b.chunk.js",
+    "static/js/2.1b4e5d31.chunk.js",
     "static/css/main.acb88737.chunk.css",
-    "static/js/main.ffae9792.chunk.js"
+    "static/js/main.87bef9c5.chunk.js"
   ]
 }
